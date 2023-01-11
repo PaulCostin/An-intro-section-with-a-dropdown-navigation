@@ -52,7 +52,9 @@ nav {
 }
 
 #icon-down1,
-#icon-down2 {
+#icon-down2,
+#icon-down1D,
+#icon-down2D {
     padding: 0 0 2px 4px;
 }
 
@@ -60,8 +62,7 @@ nav {
 
 #article {
     display: flex;
-    height: max-content;
-    margin: 3em 10em 0 10em;
+    margin: 3em 15% 0 15%;
     flex-wrap: wrap;
 }
 
@@ -116,23 +117,31 @@ nav {
 }
 
 .article-right img {
-    width: 25em;
-    object-fit: contain;
+    width: 24em;
     box-sizing: border-box;
+    object-fit: contain;
+}
+
+#navForMobile {
+    display: none;
 }
 
 /* desktop version is done */
 #menu-1,
-#menu-2 {
+#menu-2,
+#menu-1D,
+#menu-2D {
     position: relative;
 }
 
 #toDropDown-1,
-#toDropDown-2 {
+#toDropDown-2,
+#toDropDown-1D,
+#toDropDown-2D {
     display: none;
 }
 
-.height-100 {
+.pop {
     display: initial !important;
     position: absolute;
     left: -40px;
@@ -147,18 +156,188 @@ nav {
     display: flex;
 }
 
-#toDropDown-2 {
+#toDropDown-2,
+#toDropDown-2D {
     height: 140px;
 }
 
-.height-100>p {
+.pop>p {
     margin: 25px 0 0 20px;
     display: flex;
     align-items: center;
 }
 
-.height-100>p>img {
+.pop>p>img {
     margin: 0 15px 0 0;
 }
 
-@media screen and (max-width:600px) {}
+@media screen and (max-width:1440px) {
+    #article {
+        display: flex;
+        margin: 1.5em 15% 0 15%;
+        padding-bottom: 2em;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .icon-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 50px;
+        margin-left: 50px;
+    }
+
+    #article {
+        margin: 3em 10% 0 10%;
+    }
+
+    .article-right img {
+        height: 80%;
+    }
+
+}
+
+@media screen and (max-width:880px) {
+
+    .hidden {
+        display: none;
+    }
+
+    .shown {
+        display: initial;
+    }
+
+    #navForDesktop {
+        display: none;
+    }
+
+    #navForMobile {
+        display: flex;
+        font-family: 'Epilogue', sans-serif;
+        margin: 35px 40px 0 40px;
+        align-items: center;
+        font-size: 15px;
+        justify-content: space-between;
+    }
+
+    #ham-menu {
+        margin-right: 30px;
+        height: 25px;
+    }
+
+    #ham-menu-close {
+        height: 40px;
+        position: absolute;
+        top: 25px;
+        right: 70px;
+    }
+
+    #mobileSideMenu {
+        position: absolute;
+        height: 200vh;
+        width: 30rem;
+        background-color: hsl(0, 0%, 98%);
+        top: 0;
+        right: 0;
+    }
+
+    #article {
+        flex-direction: column-reverse;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .article-right>img {
+        content: url(images/image-hero-mobile.png);
+        width: 70%;
+    }
+
+    .article-left {
+        text-align: center;
+    }
+
+    .article-left p {
+        margin: 2em 4em 0.5em 4em;
+    }
+
+    .icon-images {
+        display: flex;
+        margin: 40px 50px 0 50px;
+    }
+
+    .inner-nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 3em 2em 0 1em;
+        font-size: 30px;
+        height: 250px;
+    }
+
+    .inner-nav span {
+        display: grid;
+        margin-left: 40px;
+        grid-template-columns: 1fr;
+    }
+
+    .inner-nav>span>a {
+        margin: 45px 0 0 0;
+    }
+
+    .inner-nav>span>button {
+        margin: 45px 0 0 0;
+    }
+
+    .inner-nav>span:nth-child(2) {
+        margin: 30px 0px 0px 0px;
+        flex-wrap: wrap;
+        width: min-content;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+    }
+
+    #toDropDown-1 {
+        display: none;
+        height: 250px;
+        width: 250px;
+    }
+
+    #toDropDown-2 {
+        height: 190px;
+        width: 230px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    .icon-images {
+        margin: 40px 20px 0 20px;
+    }
+
+    #ham-menu {
+        margin-right: 10px;
+        height: 25px;
+    }
+
+    #mobileSideMenu {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    body {
+        margin: 0;
+    }
+
+    #ham-menu {
+        margin-right: -20px;
+        height: 25px;
+    }
+
+    #mobileSideMenu {
+        width: 20rem;
+        right: -22px;
+    }
+
+}

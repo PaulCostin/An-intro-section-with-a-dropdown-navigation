@@ -19,14 +19,72 @@
     <title>Intro section with dropdown navigation</title>
   </head>
   <body>
-    <nav>
+    <!-- nav for mobile -->
+    <nav id="navForMobile">
+      <img src="images/logo.svg" alt="" srcset="" />
+      <img
+        id="ham-menu"
+        src="images/icon-menu.svg"
+        onclick="openMenu()"
+        alt=""
+      />
+      <div id="mobileSideMenu">
+        <img
+          id="ham-menu-close"
+          src="images/icon-close-menu.svg"
+          onclick="openMenu()"
+          alt=""
+        />
+        <div class="inner-nav">
+          <span>
+            <a id="menu-1" href="">
+              Features
+              <img id="icon-down1" src="images/icon-arrow-down.svg" alt="" />
+              <div id="toDropDown-1">
+                <p><img src="images/icon-todo.svg" alt="" /> todo List</p>
+                <p>
+                  <img src="images/icon-calendar.svg" alt="" srcset="" />
+                  Calendar
+                </p>
+                <p>
+                  <img src="images/icon-reminders.svg" alt="" srcset="" />
+                  Reminders
+                </p>
+                <p>
+                  <img src="images/icon-planning.svg" alt="" srcset="" />
+                  Planning
+                </p>
+              </div>
+            </a>
+            <a id="menu-2" href="">
+              Company
+              <img id="icon-down2" src="images/icon-arrow-down.svg" alt="" />
+              <div id="toDropDown-2">
+                <p>History</p>
+                <p>Our Team</p>
+                <p>Blog</p>
+              </div>
+            </a>
+            <a href=""> Careers </a>
+            <a href=""> About </a>
+          </span>
+          <span>
+            <a href="">Login</a>
+            <button><a href="">Register</a></button>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!-- nav for mobile -->
+    <!-- nav for desktop -->
+    <nav id="navForDesktop">
       <img src="images/logo.svg" alt="" srcset="" />
       <div class="inner-nav">
         <span>
-          <a id="menu-1" href="">
+          <a id="menu-1D" href="">
             Features
-            <img id="icon-down1" src="images/icon-arrow-down.svg" alt="" />
-            <div id="toDropDown-1">
+            <img id="icon-down1D" src="images/icon-arrow-down.svg" alt="" />
+            <div id="toDropDown-1D">
               <p><img src="images/icon-todo.svg" alt="" /> todo List</p>
               <p>
                 <img src="images/icon-calendar.svg" alt="" srcset="" /> Calendar
@@ -40,10 +98,10 @@
               </p>
             </div>
           </a>
-          <a id="menu-2" href="">
+          <a id="menu-2D" href="">
             Company
-            <img id="icon-down2" src="images/icon-arrow-down.svg" alt="" />
-            <div id="toDropDown-2">
+            <img id="icon-down2D" src="images/icon-arrow-down.svg" alt="" />
+            <div id="toDropDown-2D">
               <p>History</p>
               <p>Our Team</p>
               <p>Blog</p>
