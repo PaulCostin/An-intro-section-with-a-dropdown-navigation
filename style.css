@@ -8,7 +8,7 @@ nav {
     margin: 35px 40px 0 40px;
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .inner-nav {
@@ -30,6 +30,12 @@ nav {
     color: hsl(0, 0%, 41%);
 }
 
+.inner-nav a:hover,
+.inner-nav button:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
 .inner-nav>span>button {
     border: 2px solid hsl(0, 0%, 41%);
     width: 120px;
@@ -42,9 +48,117 @@ nav {
 
 .inner-nav>span>button>a {
     margin: 0;
-    font-size: 18px;
+    font-size: 15px;
 }
 
-#icon-down {
-    padding: 0 0 3px 3px;
+#icon-down1,
+#icon-down2 {
+    padding: 0 0 2px 4px;
 }
+
+/* Above is the nav for desktop */
+
+#article {
+    display: flex;
+    height: max-content;
+    margin: 3em 10em 0 10em;
+    flex-wrap: wrap;
+}
+
+.article-left,
+.article-right {
+    flex: 1;
+}
+
+.article-left h1,
+.article-left p {
+    font-family: 'Epilogue', sans-serif;
+}
+
+.article-left h1 {
+    font-size: 85px;
+    margin: 0.6em 0.5em 0 0;
+}
+
+.article-left p {
+    font-size: 18px;
+    color: hsl(0, 0%, 41%);
+    margin: 2em 7em 0.5em 0;
+}
+
+.article-left button {
+    background-color: hsl(0, 0%, 8%);
+    color: white;
+    width: fit-content;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 12px;
+    font-family: 'Epilogue', sans-serif;
+    margin: 2em 0 0 0;
+    padding: 0 25px 0 25px;
+}
+
+.article-left button:hover {
+    background-color: white;
+    color: hsl(0, 0%, 8%);
+}
+
+.icon-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px
+}
+
+.article-right {
+    display: flex;
+    justify-content: center;
+}
+
+.article-right img {
+    width: 25em;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* desktop version is done */
+#menu-1,
+#menu-2 {
+    position: relative;
+}
+
+#toDropDown-1,
+#toDropDown-2 {
+    display: none;
+}
+
+.height-100 {
+    display: initial !important;
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    border-radius: 10px;
+    height: 180px;
+    width: 150px;
+    border: 1px solid rgb(234, 234, 234);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    z-index: 10;
+    display: flex;
+}
+
+#toDropDown-2 {
+    height: 140px;
+}
+
+.height-100>p {
+    margin: 25px 0 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.height-100>p>img {
+    margin: 0 15px 0 0;
+}
+
+@media screen and (max-width:600px) {}
